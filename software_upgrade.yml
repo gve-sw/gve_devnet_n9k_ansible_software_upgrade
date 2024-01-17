@@ -1,0 +1,8 @@
+---
+# main playbook for upgrading firmware on Nexus Switches
+
+- name: Upgrade Firmware on Cisco Nexus 9K
+  gather_facts: no
+  hosts: nxos
+  roles:
+    - role: nxos

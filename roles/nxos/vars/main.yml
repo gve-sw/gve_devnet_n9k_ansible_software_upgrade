@@ -1,0 +1,21 @@
+---
+# Global Variables for NXOS Playbook
+ansible_connection: ansible.netcommon.network_cli
+ansible_network_os: cisco.nxos.nxos
+ansible_user: <nx_os_ssh_user_username>
+ansible_password: <nx_os_ssh_user_password>
+
+# SCP Server Information (copying over image)
+protocol: scp
+scp_user: <scp_username>
+scp_password: <scp_password>
+scp_server: <scp_ip>
+
+# Upgrade Image Specifications
+target_nxos_ver: 10.4(1)
+target_image: nxos64-cs.10.4.1.F.bin
+target_image_md5: 2ac4a4b1558fa4eba7e363d5ad6dae72
+
+# Additional Nexus Configurations During Install
+vrf: management
+install_check_mode: "no"
